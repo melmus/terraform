@@ -1,20 +1,3 @@
-terraform {
-  required_providers {
-    yandex = {
-      source  = "yandex-cloud/yandex"
-      version = "0.71.0"
-    }
-  }
-}
-
-provider "yandex" {
-  token     = "var.tokeinID"
-  cloud_id  = "var.cloudID"
-  folder_id = "var.folderID"
-  zone      = "ru-central1-b"
-}
-
-
 resource "yandex_compute_instance" "vm-1" {
   name = "terra-1"
   platform_id = "standard-v3"
